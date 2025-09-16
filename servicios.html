@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+    <link rel="stylesheet" href="common_style.css">
+    <style>
+      .background-effect {
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        width: calc(100% + 20px);
+        height: calc(100% + 20px);
+        background-image: url('https://files.manuscdn.com/user_upload_by_module/session_file/310519663150423756/kKPpRqhduTylYcaN.jpg');
+        background-size: cover;
+        background-position: center;
+        opacity: 0.2;
+        z-index: 1;
+      }
+      
+      .slide-title {
+        font-size: 38px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        color: #00D4FF;
+        border-bottom: 2px solid #00D4FF;
+        padding-bottom: 8px;
+        display: inline-block;
+        letter-spacing: 0.5px;
+      }
+      
+      .services-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        height: calc(100% - 150px);
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 20px;
+      }
+      .left-column {
+        width: 48%;
+        box-sizing: border-box;
+      }
+      .right-column {
+        width: 48%;
+        box-sizing: border-box;
+      }
+      .service-item {
+        margin-bottom: 22px;
+        padding: 18px;
+        border-left: 3px solid #00D4FF;
+        background: rgba(0, 212, 255, 0.05);
+        border-radius: 0 5px 5px 0;
+      }
+      .service-title {
+        display: flex;
+        align-items: center;
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #00D4FF;
+        letter-spacing: 0.3px;
+      }
+      .service-icon {
+        margin-right: 12px;
+        font-size: 24px;
+      }
+      .service-description {
+        font-size: 17px;
+        line-height: 1.5;
+        letter-spacing: 0.2px;
+      }
+      .intro-text {
+        font-size: 22px;
+        line-height: 1.6;
+        margin-bottom: 25px;
+        max-width: 80%;
+        letter-spacing: 0.3px;
+        padding: 0 20px;
+      }
+      .footer-note {
+        margin-top: 15px;
+        font-style: italic;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 18px;
+        text-align: center;
+        letter-spacing: 0.2px;
+      }
+      
+      /* Elementos decorativos para eliminar espacios blancos */
+      .corner-decoration {
+        position: absolute;
+        bottom: -5px;
+        right: -5px;
+        width: 150px;
+        height: 150px;
+        border-right: 2px solid rgba(0, 212, 255, 0.2);
+        border-bottom: 2px solid rgba(0, 212, 255, 0.2);
+        z-index: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container">
+      <div class="background-effect"></div>
+      <div class="corner-decoration"></div>
+      <div class="content">
+        <h1 class="slide-title">Nuestros Servicios</h1>
+        
+        <p class="intro-text">
+          Ofrecemos servicios de <span class="highlight">ayuda y asesoramiento</span> especializados 
+          para maximizar el potencial de la IA en tu organización:
+        </p>
+        
+        <div class="services-container">
+          <div class="left-column">
+            <div class="service-item">
+              <div class="service-title">
+                <i class="fas fa-search service-icon"></i>
+                Diagnóstico y Evaluación
+              </div>
+              <p class="service-description">
+                Analizamos tu organización para identificar oportunidades de implementación 
+                de IA y áreas de mejora en procesos existentes.
+              </p>
+            </div>
+            
+            <div class="service-item">
+              <div class="service-title">
+                <i class="fas fa-project-diagram service-icon"></i>
+                Diseño de Arquitectura IA
+              </div>
+              <p class="service-description">
+                Creamos arquitecturas tecnológicas adaptadas a tus necesidades específicas, 
+                integrando soluciones de IA con tus sistemas actuales.
+              </p>
+            </div>
+            
+            <div class="service-item">
+              <div class="service-title">
+                <i class="fas fa-robot service-icon"></i>
+                Desarrollo de Agentes IA
+              </div>
+              <p class="service-description">
+                Diseñamos y desarrollamos agentes inteligentes que entienden, aprenden y 
+                actúan en tu contexto empresarial específico.
+              </p>
+            </div>
+          </div>
+          
+          <div class="right-column">
+            <div class="service-item">
+              <div class="service-title">
+                <i class="fas fa-cogs service-icon"></i>
+                Automatización de Procesos
+              </div>
+              <p class="service-description">
+                Redefinimos flujos de trabajo para eliminar fricción, reducir errores y 
+                liberar tiempo valioso para tareas estratégicas.
+              </p>
+            </div>
+            
+            <div class="service-item">
+              <div class="service-title">
+                <i class="fas fa-graduation-cap service-icon"></i>
+                Formación y Capacitación
+              </div>
+              <p class="service-description">
+                Programas de formación personalizados para equipos, desde conceptos básicos 
+                hasta implementaciones avanzadas de IA.
+              </p>
+            </div>
+            
+            <div class="service-item">
+              <div class="service-title">
+                <i class="fas fa-chart-line service-icon"></i>
+                Medición de Impacto
+              </div>
+              <p class="service-description">
+                Establecemos métricas claras y sistemas de seguimiento para evaluar el ROI 
+                y el impacto real de las implementaciones de IA.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <p class="footer-note">
+          Todos nuestros servicios combinan experiencia técnica con comprensión profunda de negocio
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

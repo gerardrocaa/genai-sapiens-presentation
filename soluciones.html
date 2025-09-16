@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+    <link rel="stylesheet" href="common_style.css">
+    <style>
+      .slide-title {
+        font-size: 38px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        color: #00D4FF;
+        border-bottom: 2px solid #00D4FF;
+        padding-bottom: 8px;
+        display: inline-block;
+        letter-spacing: 0.5px;
+      }
+      
+      .solutions-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 35px;
+        margin-top: 25px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 20px;
+      }
+      .solution-item {
+        display: flex;
+        background: rgba(0, 212, 255, 0.05);
+        border-radius: 10px;
+        padding: 25px;
+        transition: all 0.3s ease;
+        box-sizing: border-box;
+      }
+      .solution-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 212, 255, 0.2);
+      }
+      .solution-icon {
+        font-size: 40px;
+        color: #00D4FF;
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        height: 80px;
+        background: rgba(0, 212, 255, 0.1);
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+      .solution-content {
+        flex: 1;
+      }
+      .solution-title {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #00D4FF;
+        letter-spacing: 0.3px;
+      }
+      .solution-description {
+        font-size: 17px;
+        line-height: 1.5;
+        letter-spacing: 0.2px;
+      }
+      .intro-text {
+        font-size: 22px;
+        line-height: 1.6;
+        margin-bottom: 25px;
+        max-width: 80%;
+        letter-spacing: 0.3px;
+        padding: 0 20px;
+      }
+      .footer-note {
+        margin-top: 30px;
+        font-size: 20px;
+        font-style: italic;
+        color: #FFFFFF;
+        text-align: center;
+        letter-spacing: 0.2px;
+      }
+      
+      /* Elementos decorativos para eliminar espacios blancos */
+      .bg-tech-pattern {
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        width: calc(100% + 20px);
+        height: calc(100% + 20px);
+        background: radial-gradient(circle at bottom right, rgba(0, 212, 255, 0.1), transparent 70%);
+        z-index: 0;
+      }
+      
+      .bg-tech-lines {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 200px;
+        height: 200px;
+        border-top: 1px solid rgba(0, 212, 255, 0.1);
+        border-left: 1px solid rgba(0, 212, 255, 0.1);
+        z-index: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container">
+      <div class="bg-tech-pattern"></div>
+      <div class="bg-tech-lines"></div>
+      <div class="content">
+        <h1 class="slide-title">Nuestras Soluciones</h1>
+        
+        <p class="intro-text">
+          Portfolio de <span class="highlight">productos y servicios IA</span> diseñados para transformar tu negocio:
+        </p>
+        
+        <div class="solutions-grid">
+          <div class="solution-item">
+            <div class="solution-icon">
+              <i class="fas fa-search-dollar"></i>
+            </div>
+            <div class="solution-content">
+              <h3 class="solution-title">ProspectAI Engine</h3>
+              <p class="solution-description">
+                Automatizamos tu prospección B2B: De leads a conversaciones, completamente automatizado.
+              </p>
+            </div>
+          </div>
+          
+          <div class="solution-item">
+            <div class="solution-icon">
+              <i class="fas fa-bullhorn"></i>
+            </div>
+            <div class="solution-content">
+              <h3 class="solution-title">Suite Sapiens</h3>
+              <p class="solution-description">
+                Tu centro de mando operativo. Marketing, ventas y gestión, integrados en una plataforma unificada.
+              </p>
+            </div>
+          </div>
+          
+          <div class="solution-item">
+            <div class="solution-icon">
+              <i class="fas fa-heartbeat"></i>
+            </div>
+            <div class="solution-content">
+              <h3 class="solution-title">AiKARE</h3>
+              <p class="solution-description">
+                La experiencia del paciente, reinventada. CRM y atención IA para centros médicos.
+              </p>
+            </div>
+          </div>
+          
+          <div class="solution-item">
+            <div class="solution-icon">
+              <i class="fas fa-globe-americas"></i>
+            </div>
+            <div class="solution-content">
+              <h3 class="solution-title">Eidosfera</h3>
+              <p class="solution-description">
+                Conocimiento global, acceso local. Contenido curado y traducido para tu equipo.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <p class="footer-note">
+          A continuación, les presentaremos nuestra solución específica para su sector.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

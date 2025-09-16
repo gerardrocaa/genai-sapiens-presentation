@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+    <link rel="stylesheet" href="common_style.css">
+    <style>
+      .background-effect {
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        width: calc(100% + 20px);
+        height: calc(100% + 20px);
+        background-image: url('https://files.manuscdn.com/user_upload_by_module/session_file/310519663150423756/FNQzlJLxTzLObcWm.jpg');
+        background-size: cover;
+        background-position: center;
+        opacity: 0.6;
+        z-index: 1;
+      }
+      .front-content {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .logo {
+        margin-bottom: 60px;
+        max-width: 320px;
+        height: auto;
+      }
+      .main-title {
+        font-size: 72px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        text-align: center;
+        background: linear-gradient(90deg, #FFFFFF, #00D4FF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+        width: 100%;
+        letter-spacing: 1px;
+      }
+      .subtitle {
+        font-size: 36px;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #00D4FF;
+        width: 100%;
+        letter-spacing: 0.5px;
+      }
+      .glow {
+        box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+        border-radius: 10px;
+      }
+      
+      /* Elementos decorativos adicionales */
+      .circuit-lines {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        width: 150px;
+        height: 150px;
+        border-left: 2px solid rgba(0, 212, 255, 0.3);
+        border-bottom: 2px solid rgba(0, 212, 255, 0.3);
+        z-index: 1;
+        opacity: 0.7;
+      }
+      
+      .circuit-lines-2 {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 150px;
+        height: 150px;
+        border-right: 2px solid rgba(0, 212, 255, 0.3);
+        border-top: 2px solid rgba(0, 212, 255, 0.3);
+        z-index: 1;
+        opacity: 0.7;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container">
+      <div class="background-effect"></div>
+      <div class="circuit-lines"></div>
+      <div class="circuit-lines-2"></div>
+      <div class="front-content">
+        <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663150423756/yLskLRLvDKrbYtJF.png" alt="Genai Sapiens Consulting Logo" class="logo glow">
+        <h1 class="main-title">Genai Sapiens Consulting</h1>
+        <h2 class="subtitle">Transformando empresas a través de la IA</h2>
+      </div>
+    </div>
+  </body>
+</html>

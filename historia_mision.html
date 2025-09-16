@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+    <link rel="stylesheet" href="common_style.css">
+    <style>
+      .background-effect {
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        width: calc(100% + 20px);
+        height: calc(100% + 20px);
+        background-image: url('https://files.manuscdn.com/user_upload_by_module/session_file/310519663150423756/VGLDsrLcuENmhOcY.jpg');
+        background-size: cover;
+        background-position: center;
+        opacity: 0.2;
+        z-index: 1;
+      }
+      .main-content {
+        display: flex;
+        justify-content: space-between;
+        height: calc(100% - 80px);
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 20px;
+      }
+      .left-column {
+        width: 55%;
+        padding-right: 40px;
+        box-sizing: border-box;
+      }
+      .right-column {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-sizing: border-box;
+      }
+      .highlight-box {
+        background: rgba(0, 212, 255, 0.1);
+        border-left: 4px solid #00D4FF;
+        padding: 22px;
+        margin-bottom: 25px;
+        border-radius: 0 5px 5px 0;
+      }
+      .highlight-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 12px;
+        color: #00D4FF;
+        letter-spacing: 0.5px;
+      }
+      .highlight-text {
+        font-size: 18px;
+        line-height: 1.5;
+        letter-spacing: 0.3px;
+      }
+      .quote {
+        font-size: 24px;
+        font-style: italic;
+        line-height: 1.6;
+        padding: 25px;
+        border-radius: 5px;
+        background: linear-gradient(90deg, rgba(0, 212, 255, 0.1), transparent);
+        margin-top: 20px;
+        letter-spacing: 0.3px;
+      }
+      .values {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+      }
+      .value-tag {
+        background: rgba(0, 212, 255, 0.2);
+        color: #00D4FF;
+        padding: 10px 15px;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+      }
+      
+      .slide-title {
+        font-size: 38px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        color: #00D4FF;
+        border-bottom: 2px solid #00D4FF;
+        padding-bottom: 8px;
+        display: inline-block;
+        letter-spacing: 0.5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container">
+      <div class="background-effect"></div>
+      <div class="content">
+        <h1 class="slide-title">Nuestra Historia y Misión</h1>
+        
+        <div class="main-content">
+          <div class="left-column">
+            <div class="highlight-box">
+              <h2 class="highlight-title">Origen y Filosofía</h2>
+              <p class="highlight-text">
+                Nacimos con la visión de democratizar el acceso a la IA para todas las empresas, 
+                transformando la manera en que las organizaciones aprovechan la tecnología para 
+                potenciar su talento humano.
+              </p>
+            </div>
+            
+            <div class="highlight-box">
+              <h2 class="highlight-title">Nuestra Misión</h2>
+              <p class="highlight-text">
+                Redefinimos el trabajo a través de la IA como catalizador, no como sustituto. 
+                Amplificamos la inteligencia humana, liberando talento para la estrategia, 
+                la creatividad y el valor irremplazable.
+              </p>
+            </div>
+            
+            <div class="values">
+              <span class="value-tag">#HUMANFIRSTAI</span>
+              <span class="value-tag">#RESPONSIBLEINNOVATION</span>
+              <span class="value-tag">#AMPLIFIEDHUMAN</span>
+            </div>
+          </div>
+          
+          <div class="right-column">
+            <div class="quote">
+              "La IA Generativa No Reemplaza, Amplifica. Llevamos Tu Negocio Al Siguiente Nivel Humano-Digital."
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
