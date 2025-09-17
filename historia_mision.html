@@ -8,131 +8,181 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
     <link rel="stylesheet" href="common_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-      .background-effect {
-        position: absolute;
-        top: -10px;
-        left: -10px;
-        width: calc(100% + 20px);
-        height: calc(100% + 20px);
-        background-image: url('https://files.manuscdn.com/user_upload_by_module/session_file/310519663150423756/VGLDsrLcuENmhOcY.jpg');
-        background-size: cover;
-        background-position: center;
-        opacity: 0.2;
-        z-index: 1;
+      .slide-title {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 38px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        color: #0025ff;
+        border-bottom: 2px solid #0025ff;
+        padding-bottom: 8px;
+        display: inline-block;
+        letter-spacing: 0.5px;
       }
+      
       .main-content {
         display: flex;
         justify-content: space-between;
-        height: calc(100% - 80px);
+        height: calc(100% - 100px);
         width: 100%;
         box-sizing: border-box;
         padding: 0 20px;
       }
       .left-column {
-        width: 55%;
-        padding-right: 40px;
+        width: 48%;
         box-sizing: border-box;
       }
       .right-column {
-        width: 40%;
+        width: 48%;
+        box-sizing: border-box;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        box-sizing: border-box;
       }
-      .highlight-box {
-        background: rgba(0, 212, 255, 0.1);
-        border-left: 4px solid #00D4FF;
-        padding: 22px;
+      .section-title {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #0025ff;
+        letter-spacing: 0.3px;
+      }
+      .section-content {
+        font-family: 'Inter', sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 25px;
+        letter-spacing: 0.2px;
+      }
+      .vision-box {
+        background: rgba(0, 37, 255, 0.05);
+        border-left: 4px solid #0025ff;
+        padding: 20px;
         margin-bottom: 25px;
         border-radius: 0 5px 5px 0;
       }
-      .highlight-title {
-        font-size: 24px;
+      .vision-title {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 22px;
         font-weight: bold;
-        margin-bottom: 12px;
-        color: #00D4FF;
-        letter-spacing: 0.5px;
+        margin-bottom: 10px;
+        color: #0025ff;
+        letter-spacing: 0.3px;
       }
-      .highlight-text {
+      .vision-text {
+        font-family: 'Inter', sans-serif;
         font-size: 18px;
-        line-height: 1.5;
-        letter-spacing: 0.3px;
-      }
-      .quote {
-        font-size: 24px;
         font-style: italic;
-        line-height: 1.6;
-        padding: 25px;
-        border-radius: 5px;
-        background: linear-gradient(90deg, rgba(0, 212, 255, 0.1), transparent);
-        margin-top: 20px;
-        letter-spacing: 0.3px;
+        line-height: 1.5;
+        letter-spacing: 0.2px;
       }
-      .values {
+      .values-container {
         display: flex;
-        justify-content: space-between;
-        margin-top: 30px;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 20px;
       }
-      .value-tag {
-        background: rgba(0, 212, 255, 0.2);
-        color: #00D4FF;
-        padding: 10px 15px;
-        border-radius: 20px;
-        font-weight: bold;
+      .value-item {
+        background: rgba(0, 37, 255, 0.05);
+        border-radius: 5px;
+        padding: 12px 20px;
+        font-family: 'Space Grotesk', sans-serif;
         font-size: 16px;
-        letter-spacing: 0.5px;
+        font-weight: 500;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+      }
+      .value-icon {
+        color: #0025ff;
+        margin-right: 10px;
+        font-size: 18px;
       }
       
-      .slide-title {
-        font-size: 38px;
-        font-weight: bold;
-        margin-bottom: 30px;
-        color: #00D4FF;
-        border-bottom: 2px solid #00D4FF;
-        padding-bottom: 8px;
-        display: inline-block;
-        letter-spacing: 0.5px;
+      /* Elementos decorativos para eliminar espacios blancos */
+      .bg-decoration {
+        position: absolute;
+        bottom: -50px;
+        right: -50px;
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(circle, rgba(0, 37, 255, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+        z-index: 0;
+        border-radius: 50%;
+      }
+      
+      .bg-decoration-2 {
+        position: absolute;
+        top: -50px;
+        left: -50px;
+        width: 250px;
+        height: 250px;
+        background: radial-gradient(circle, rgba(0, 37, 255, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
+        z-index: 0;
+        border-radius: 50%;
       }
     </style>
   </head>
   <body>
     <div class="slide-container">
-      <div class="background-effect"></div>
+      <div class="bg-decoration"></div>
+      <div class="bg-decoration-2"></div>
       <div class="content">
         <h1 class="slide-title">Nuestra Historia y Misión</h1>
         
         <div class="main-content">
           <div class="left-column">
-            <div class="highlight-box">
-              <h2 class="highlight-title">Origen y Filosofía</h2>
-              <p class="highlight-text">
-                Nacimos con la visión de democratizar el acceso a la IA para todas las empresas, 
-                transformando la manera en que las organizaciones aprovechan la tecnología para 
-                potenciar su talento humano.
-              </p>
-            </div>
+            <h2 class="section-title">Origen y Filosofía</h2>
+            <p class="section-content">
+              Genai Sapiens Consulting™ nace de la visión de un equipo de expertos en IA y transformación digital, 
+              comprometidos con <span class="highlight">democratizar el acceso a la IA generativa</span> para todas las empresas.
+            </p>
+            <p class="section-content">
+              Nuestra filosofía se basa en el principio de que la tecnología debe amplificar el talento humano, 
+              no reemplazarlo. Creemos firmemente que la IA generativa es una herramienta poderosa que, 
+              bien implementada, puede transformar organizaciones y mejorar la vida de las personas.
+            </p>
             
-            <div class="highlight-box">
-              <h2 class="highlight-title">Nuestra Misión</h2>
-              <p class="highlight-text">
-                Redefinimos el trabajo a través de la IA como catalizador, no como sustituto. 
-                Amplificamos la inteligencia humana, liberando talento para la estrategia, 
-                la creatividad y el valor irremplazable.
+            <div class="vision-box">
+              <h3 class="vision-title">Nuestra Visión</h3>
+              <p class="vision-text">
+                "Vivir bien y hacer vivir mejor, poniendo al humano en el centro de la era IA."
               </p>
-            </div>
-            
-            <div class="values">
-              <span class="value-tag">#HUMANFIRSTAI</span>
-              <span class="value-tag">#RESPONSIBLEINNOVATION</span>
-              <span class="value-tag">#AMPLIFIEDHUMAN</span>
             </div>
           </div>
           
           <div class="right-column">
-            <div class="quote">
-              "La IA Generativa No Reemplaza, Amplifica. Llevamos Tu Negocio Al Siguiente Nivel Humano-Digital."
+            <h2 class="section-title">Misión</h2>
+            <p class="section-content">
+              Llevamos a las organizaciones a su siguiente nivel humano-digital a través de la IA generativa, 
+              entregando prototipos o ahorros medibles en menos de 30 días, sin depender de plantillas 
+              masivas ni consultorías interminables.
+            </p>
+            
+            <h2 class="section-title">Valores Fundamentales</h2>
+            <div class="values-container">
+              <div class="value-item">
+                <i class="fas fa-user value-icon"></i>
+                Humanismo
+              </div>
+              <div class="value-item">
+                <i class="fas fa-lightbulb value-icon"></i>
+                Innovación Responsable
+              </div>
+              <div class="value-item">
+                <i class="fas fa-chart-line value-icon"></i>
+                Impacto Real
+              </div>
+              <div class="value-item">
+                <i class="fas fa-users value-icon"></i>
+                Colaboración
+              </div>
+              <div class="value-item">
+                <i class="fas fa-star value-icon"></i>
+                Excelencia Simple
+              </div>
             </div>
           </div>
         </div>
