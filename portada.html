@@ -8,6 +8,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
     <link rel="stylesheet" href="common_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
       .background-effect {
         position: absolute;
@@ -39,27 +40,38 @@
         height: auto;
       }
       .main-title {
+        font-family: 'Space Grotesk', sans-serif;
         font-size: 72px;
         font-weight: bold;
         margin-bottom: 30px;
         text-align: center;
-        background: linear-gradient(90deg, #FFFFFF, #00D4FF);
+        background: linear-gradient(90deg, #FFFFFF, #0025ff);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        text-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+        text-shadow: 0 0 20px rgba(0, 37, 255, 0.3);
         width: 100%;
         letter-spacing: 1px;
       }
       .subtitle {
+        font-family: 'Space Grotesk', sans-serif;
         font-size: 36px;
         margin-bottom: 20px;
         text-align: center;
-        color: #00D4FF;
+        color: #0025ff;
+        width: 100%;
+        letter-spacing: 0.5px;
+      }
+      .tagline {
+        font-family: 'Inter', sans-serif;
+        font-size: 24px;
+        margin-top: 30px;
+        text-align: center;
+        color: #FFFFFF;
         width: 100%;
         letter-spacing: 0.5px;
       }
       .glow {
-        box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+        box-shadow: 0 0 30px rgba(0, 37, 255, 0.5);
         border-radius: 10px;
       }
       
@@ -70,8 +82,8 @@
         left: 20px;
         width: 150px;
         height: 150px;
-        border-left: 2px solid rgba(0, 212, 255, 0.3);
-        border-bottom: 2px solid rgba(0, 212, 255, 0.3);
+        border-left: 2px solid rgba(0, 37, 255, 0.3);
+        border-bottom: 2px solid rgba(0, 37, 255, 0.3);
         z-index: 1;
         opacity: 0.7;
       }
@@ -82,8 +94,8 @@
         right: 20px;
         width: 150px;
         height: 150px;
-        border-right: 2px solid rgba(0, 212, 255, 0.3);
-        border-top: 2px solid rgba(0, 212, 255, 0.3);
+        border-right: 2px solid rgba(0, 37, 255, 0.3);
+        border-top: 2px solid rgba(0, 37, 255, 0.3);
         z-index: 1;
         opacity: 0.7;
       }
@@ -96,8 +108,9 @@
       <div class="circuit-lines-2"></div>
       <div class="front-content">
         <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663150423756/yLskLRLvDKrbYtJF.png" alt="Genai Sapiens Consulting Logo" class="logo glow">
-        <h1 class="main-title">Genai Sapiens Consulting</h1>
-        <h2 class="subtitle">Transformando empresas a través de la IA</h2>
+        <h1 class="main-title">Genai Sapiens Consulting™</h1>
+        <h2 class="subtitle">Llevamos a las organizaciones a su siguiente nivel humano-digital</h2>
+        <p class="tagline">Human First. Technology Second.</p>
       </div>
     </div>
   </body>

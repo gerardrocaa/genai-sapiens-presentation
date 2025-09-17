@@ -8,78 +8,109 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
     <link rel="stylesheet" href="common_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
       .slide-title {
+        font-family: 'Space Grotesk', sans-serif;
         font-size: 38px;
         font-weight: bold;
         margin-bottom: 30px;
-        color: #00D4FF;
-        border-bottom: 2px solid #00D4FF;
+        color: #0025ff;
+        border-bottom: 2px solid #0025ff;
         padding-bottom: 8px;
         display: inline-block;
         letter-spacing: 0.5px;
       }
       
-      .pillars-container {
+      .services-container {
         display: flex;
-        justify-content: space-between;
-        margin-top: 30px;
-        height: calc(100% - 150px);
+        flex-direction: column;
+        margin-top: 20px;
         width: 100%;
         box-sizing: border-box;
         padding: 0 20px;
       }
-      .pillar {
-        width: 30%;
-        background: rgba(0, 212, 255, 0.05);
-        border-radius: 10px;
-        padding: 30px;
+      
+      .service-row {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        width: 100%;
+      }
+      
+      .service-item {
+        width: 30%;
+        background: rgba(0, 37, 255, 0.05);
+        border-radius: 10px;
+        padding: 25px;
         transition: all 0.3s ease;
         box-sizing: border-box;
       }
-      .pillar:hover {
+      
+      .service-item:hover {
         transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 212, 255, 0.2);
+        box-shadow: 0 10px 20px rgba(0, 37, 255, 0.2);
       }
-      .pillar-icon {
-        font-size: 50px;
-        color: #00D4FF;
-        margin-bottom: 20px;
-      }
-      .pillar-title {
+      
+      .service-title {
+        font-family: 'Space Grotesk', sans-serif;
         font-size: 22px;
         font-weight: bold;
         margin-bottom: 15px;
-        color: #00D4FF;
-        text-align: center;
+        color: #0025ff;
         letter-spacing: 0.3px;
       }
-      .pillar-description {
+      
+      .service-description {
+        font-family: 'Inter', sans-serif;
         font-size: 17px;
-        text-align: center;
         line-height: 1.5;
         letter-spacing: 0.2px;
       }
-      .main-description {
+      
+      .service-duration {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 16px;
+        margin-top: 15px;
+        color: rgba(255, 255, 255, 0.7);
+        display: flex;
+        align-items: center;
+      }
+      
+      .duration-icon {
+        color: #0025ff;
+        margin-right: 8px;
+      }
+      
+      .intro-text {
+        font-family: 'Inter', sans-serif;
         font-size: 22px;
         line-height: 1.6;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         max-width: 80%;
         letter-spacing: 0.3px;
         padding: 0 20px;
       }
       
-      /* Fondo decorativo adicional para eliminar espacios blancos */
+      .tagline {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 24px;
+        font-weight: 500;
+        font-style: italic;
+        text-align: center;
+        color: #0025ff;
+        margin-top: 30px;
+        letter-spacing: 0.5px;
+      }
+      
+      /* Elementos decorativos para eliminar espacios blancos */
       .bg-decoration {
         position: absolute;
         bottom: -50px;
         right: -50px;
         width: 300px;
         height: 300px;
-        background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, rgba(10, 10, 10, 0) 70%);
+        background: radial-gradient(circle, rgba(0, 37, 255, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
         z-index: 0;
         border-radius: 50%;
       }
@@ -90,7 +121,7 @@
         left: -50px;
         width: 250px;
         height: 250px;
-        background: radial-gradient(circle, rgba(0, 212, 255, 0.05) 0%, rgba(10, 10, 10, 0) 70%);
+        background: radial-gradient(circle, rgba(0, 37, 255, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
         z-index: 0;
         border-radius: 50%;
       }
@@ -103,39 +134,84 @@
       <div class="content">
         <h1 class="slide-title">Qué Hacemos</h1>
         
-        <p class="main-description">
-          Ofrecemos <span class="highlight">consultoría especializada en IA Generativa</span> para transformar 
-          empresas a través de tres pilares fundamentales:
+        <p class="intro-text">
+          En Genai Sapiens Consulting™ ofrecemos <span class="highlight">consultoría especializada en IA Generativa</span> 
+          con resultados tangibles y medibles:
         </p>
         
-        <div class="pillars-container">
-          <div class="pillar">
-            <i class="fas fa-lightbulb pillar-icon"></i>
-            <h3 class="pillar-title">Estrategia y Adopción de IA</h3>
-            <p class="pillar-description">
-              Diseñamos estrategias personalizadas para integrar la IA en tu negocio, 
-              identificando oportunidades de transformación y optimización.
-            </p>
+        <div class="services-container">
+          <div class="service-row">
+            <div class="service-item">
+              <h3 class="service-title">Programas Kickstart</h3>
+              <p class="service-description">
+                IA aplicada en un proceso clave + roadmap completo para implementación escalable.
+              </p>
+              <div class="service-duration">
+                <i class="fas fa-clock duration-icon"></i>
+                30 días
+              </div>
+            </div>
+            
+            <div class="service-item">
+              <h3 class="service-title">Programa Vibenovation</h3>
+              <p class="service-description">
+                Prototipo funcional validado con usuarios reales para maximizar adopción.
+              </p>
+              <div class="service-duration">
+                <i class="fas fa-clock duration-icon"></i>
+                6 semanas
+              </div>
+            </div>
+            
+            <div class="service-item">
+              <h3 class="service-title">Department-as-a-Service</h3>
+              <p class="service-description">
+                Equipo de IA & automatización "plug-in" para tu organización.
+              </p>
+              <div class="service-duration">
+                <i class="fas fa-sync-alt duration-icon"></i>
+                Suscripción mensual
+              </div>
+            </div>
           </div>
           
-          <div class="pillar">
-            <i class="fas fa-code-branch pillar-icon"></i>
-            <h3 class="pillar-title">Desarrollo de Soluciones Personalizadas</h3>
-            <p class="pillar-description">
-              Creamos soluciones de IA adaptadas a tus necesidades específicas, 
-              desde automatizaciones avanzadas hasta agentes inteligentes.
-            </p>
-          </div>
-          
-          <div class="pillar">
-            <i class="fas fa-users-cog pillar-icon"></i>
-            <h3 class="pillar-title">Formación y Capacitación en IA</h3>
-            <p class="pillar-description">
-              Preparamos a tu equipo para trabajar con IA, mejorando habilidades 
-              y co-creando el futuro del trabajo en tu organización.
-            </p>
+          <div class="service-row">
+            <div class="service-item">
+              <h3 class="service-title">ProspectAI Engine</h3>
+              <p class="service-description">
+                Automatización de prospección B2B: De leads a conversaciones cualificadas.
+              </p>
+              <div class="service-duration">
+                <i class="fas fa-check-circle duration-icon"></i>
+                Entrega inmediata
+              </div>
+            </div>
+            
+            <div class="service-item">
+              <h3 class="service-title">Suite Sapiens CRM</h3>
+              <p class="service-description">
+                Tu centro de mando operativo. Marketing, ventas y gestión integrados.
+              </p>
+              <div class="service-duration">
+                <i class="fas fa-check-circle duration-icon"></i>
+                Entrega inmediata
+              </div>
+            </div>
+            
+            <div class="service-item">
+              <h3 class="service-title">aiKARE & Eidosfera</h3>
+              <p class="service-description">
+                Soluciones verticales para salud y educación con IA generativa.
+              </p>
+              <div class="service-duration">
+                <i class="fas fa-check-circle duration-icon"></i>
+                Entrega inmediata
+              </div>
+            </div>
           </div>
         </div>
+        
+        <p class="tagline">Human First. Technology Second.</p>
       </div>
     </div>
   </body>
